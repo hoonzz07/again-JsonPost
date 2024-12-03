@@ -5,14 +5,24 @@ body { background-color: rgba(241, 241, 241, 0.829);}
 body .webSiteTitle{padding: 2rem 0 2rem; margin-left: 130px; font-weight: bold;}
 
 .container > .modalBk {position: fixed; background-color: rgba(0, 0, 0, 0.459); inset: 0; z-index: 10; display: none;}
-.container > .modalBk > .modalJsonValueCont {margin: 0 auto; padding: 1rem; width: 800px; height: 400px; background-color: white; margin-top: 4rem;  display: none; word-break: break-word;}
+.container > .modalBk > .modalJsonValueCont {margin: 0 auto; padding: 1rem; width: 800px; height: 400px; background-color: white; margin-top: 4rem;  display: none; word-break: break-word; z-index: 100; }
 .container > .modalBk > .modalJsonValueCont > .modalImg {width: 100%; height: 50%; padding: 2rem; background-color: rgb(209, 209, 209);}
-.container > .modalBk > .modalJsonValueCont > .modalDescription {height: 40%; width: 100%;}
-.container > .modalBk > .modalJsonValueCont > .modalDescription > .modalTitle {padding: 1rem;}
-.container > .modalBk > .modalJsonValueCont > .modalDescription > .modalContents {padding: 1rem; color: rgb(179, 179, 179);}
+.container > .modalBk > .modalJsonValueCont > .modalDescription {display: flex; flex-direction:column; justify-content: space-evenly; height: 40%; width: 100%;padding: .5rem;}
+.container > .modalBk > .modalJsonValueCont > .modalDescription > .modalContents {color: rgb(179, 179, 179);}
 .container > .modalBk > .modalJsonValueCont > .memberCont {height: 15%; color: rgb(146, 146, 146); align-items: center; display: flex; justify-content: space-between; font-size: .9rem; border-top: solid 1px rgba(128, 128, 128, 0.253); }
 
-
+.container > .modalBk > .modalJsonValueCont > .searchH2{margin-left: 43.5%; margin-bottom: 1rem; margin-top: 1rem ;display: block; color: rgb(97, 97, 97); font-weight: lighter;}
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  input {border: none; width: 100%; height: 40px; border: solid 1px rgb(221, 221, 221); padding: .5rem;} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont h4 { margin-bottom: 1rem; color: rgb(46, 46, 46);} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  .searchUserCategory {margin-top: 1rem;} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  .srcCateCont {display: flex; gap: 10px; margin-top: 1rem;} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  .srcCateCont > li {padding: .4rem; font-size: .7rem; background-color: #b3b3b3; color: white; border-radius: 10px;} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  .submitBtn {width: 100%; height: 60px; border-top: 1rem; border-top: solid 1px rgba(219, 219, 219, 0.801); margin-top: 2rem; display: flex; align-items: center; gap: 15px;} 
+.container > .modalBk > .modalJsonValueCont > .searchValueCont  .submitBtn > button {width: 75px; height: 30px; height: 70%; border-top: 1rem; border-top: solid 1px rgba(219, 219, 219, 0.801); margin-top: 2rem; border: none;} 
+.cencelBtn {background-color:white; color: rgb(196, 196, 196); cursor: pointer; border-radius: 5px;}
+.seacrchBtn {background-color: rgba(57, 84, 240, 0.849); color: rgb(236, 236, 236); border-radius: 5px; cursor: pointer;}
+.cencelBtn:hover {background-color: rgba(235, 235, 235, 0.76); transition: .25s }
+.seacrchBtn:hover {background-color:  rgba(57, 84, 240, 0.945); transition: .25s }
 
 
 .container {width: 1650px; height: 100vh; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap:15px;}
@@ -24,9 +34,16 @@ body .webSiteTitle{padding: 2rem 0 2rem; margin-left: 130px; font-weight: bold;}
 .container > .jsonValueCont > .description > .contents {color: rgb(146, 146, 146); margin-top: .5rem; height: 62%;}
 
 
-.container > .jsonValueCont > .description > .memberCont {padding: 0 ; font-size: .9rem; display: flex; justify-content: space-between; color: rgb(146, 146, 146); line-height: 1.5rem;  border-top: solid 1px rgba(128, 128, 128, 0.253);  text-align: center; margin-left: -0.5rem; margin-right: -0.5rem;}
+.container > .jsonValueCont > .description > .memberCont { font-size: .9rem; display: flex; justify-content: space-between; color: rgb(146, 146, 146); line-height: 1.5rem;  border-top: solid 1px rgba(128, 128, 128, 0.253);  text-align: center; margin-left: -0.5rem; margin-right: -0.5rem;}
 .container > .jsonValueCont > .description > .memberCont > li {margin-left: 0.5rem; margin-right: 0.5rem;}
 
 
 .container > .jsonValueCont > .description > .memberCont {padding: 0 ; font-size: .9rem; display: flex; line-height: 1.5rem; }
-.container > .jsonValueCont > .description > .category > li {margin-left: 0.5rem; margin-right: 0.5rem; width: 80px; height: 40px; color: white; background-color: black; border-radius:50px;}
+.container > .jsonValueCont > .description > .category > li {  height: 30px; color: white; background-color: black; border-radius:50px;}
+.container > .jsonValueCont > .description > .category{display: flex; gap: 15px;}
+
+.container > .modalBk > .modalJsonValueCont {margin: 0 auto; padding: 1rem; width: 800px; height: 400px; background-color: white; margin-top: 4rem;  display: none; word-break: break-word;}
+
+
+.modalBk{display: none;}
+.modalBk.active{display: block;}
