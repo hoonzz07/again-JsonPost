@@ -6,6 +6,8 @@ class DataFetcher {
         this.member = null;
         this.posts = null;
         this.filteredPosts = []; // 수정: 필터링된 데이터를 저장하는 전역 배열 추가
+        this.fetchData();
+        this.addKeydownEvent();
     }
 
     async fetchData() {
@@ -196,18 +198,10 @@ class DataFetcher {
     }
     
     
- 
-
     showModal(post, userName) {
         const $modalBk = $('.modalBk');
         const $modalJsonValueCont = $('.modalJsonValueCont');
         
-        
-    
-        // if (!$modalBk || !$modalJsonValueCont) {
-        //     // console.error("Modal elements not found");
-        //     return;
-        // }
     
         // 모달 닫기 이벤트 설정
         $modalBk.addEventListener('click', () => {
@@ -239,6 +233,4 @@ class DataFetcher {
     
 }
 
-const dataFetcher = new DataFetcher();
-dataFetcher.fetchData();
-dataFetcher.addKeydownEvent();
+new DataFetcher();
