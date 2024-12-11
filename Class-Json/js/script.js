@@ -8,6 +8,7 @@ class DataFetcher {
         this.filteredPosts = []; // 수정: 필터링된 데이터를 저장하는 전역 배열 추가
         this.fetchData();
         this.addKeydownEvent();
+        
     }
 
     async fetchData() {
